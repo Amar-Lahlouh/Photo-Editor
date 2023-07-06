@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <!-- Calling bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="img col-md-8">
+          <div class="img-box">
+            <img id="img" />
+            <canvas id="canvas"></canvas>
+          </div>
+          <div class="upload">
+            <label for="upload">Upload</label>
+            <input type="file" id="upload" />
+          </div>
+        </div>
+
+        <div class="filters col-md-4">
+          <ul>
+            <li>
+              <label for="saturation">Saturation</label>
+              <input
+                type="range"
+                id="saturation"
+                min="0"
+                max="200"
+                value="100"
+              />
+            </li>
+
+            <li>
+              <label for="contrast">Contrast</label>
+              <input type="range" id="contrast" min="0" max="200" value="100" />
+            </li>
+
+            <li>
+              <label for="brightness">Brightness</label>
+              <input
+                type="range"
+                id="brightness"
+                min="0"
+                max="200"
+                value="100"
+              />
+            </li>
+
+            <li>
+              <label for="hue-rotate">Hue Rotate</label>
+              <input type="range" id="hue-rotate" min="0" max="350" value="0" />
+            </li>
+
+            <li>
+              <!-- <div class="row">
+                <div class="col-md-6 down"> -->
+              <a download="images" id="download">Download</a>
+              <!-- </div>
+                <div class="col-md-6 down"> -->
+              <span onclick="resetValue()" id="reset">Reset</span>
+              <!-- </div>
+              </div> -->
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
